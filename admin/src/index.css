@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+:root {
+  --color-background: #161618;
+  --color-surface: #1b1b1f;
+  --color-accent: #fcefbf;
+}
+
+.background-color {
+  background-color: var(--color-background);
+}
+
+.surface-color {
+  background-color: var(--color-surface);
+}
+
+.accent-color {
+  background-color: var(--color-accent);
+}
+
+.custom-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 2px solid #d1d5db; /* gray-300 */
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.custom-checkbox:checked {
+  background-color: #3b82f6; /* biru yang lebih soft dan cocok */
+  border-color: #3b82f6;
+}
+
+.custom-checkbox:checked::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 2px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}

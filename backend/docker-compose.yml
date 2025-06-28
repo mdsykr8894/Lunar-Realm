@@ -1,0 +1,16 @@
+services:
+  mariadb:
+    image: mariadb:11.3
+    container_name: mariadb
+    restart: always
+    environment:
+      MARIADB_ROOT_PASSWORD: lunar2025
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./docker/database/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - db-data:/var/lib/mysql
+      - db-data:/var/log/mysql
+
+volumes:
+  db-data:

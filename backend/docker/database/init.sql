@@ -1,0 +1,2 @@
+CREATE DATABASE IF NOT EXISTS lunar_db;
+USE lunar_db;
